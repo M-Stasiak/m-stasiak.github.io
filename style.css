@@ -1,0 +1,111 @@
+header {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  margin: auto;
+  background-image: url("background_photo_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+    margin-right: 100px;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 500px;
+}
+
+/*===============================================================*/
+/* Header Typing Effect */
+
+.TypingEffect_div h1 {
+  white-space: nowrap; /* keep text in one line */
+  overflow: hidden; /* hide text behind the cursor */
+  margin-left: 1rem;
+  font-family: 'Azeret Mono', monospace;
+  color:rgb(255, 255, 255);
+}
+.TypingEffect_div span {
+  color: black;
+}
+.TypingEffect_Line_2, .TypingEffect_Line_3 {
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.TypingEffect_Line_1 {
+  font-size: 40px;
+  border-right: 2px solid transparent;
+
+  /* define animation types for text + cursor */
+  animation: animated-text__1 3s steps(23, end) 1s 1 normal both,
+    animated-cursor 900ms steps(2, end) 4.5;
+}
+
+.TypingEffect_Line_2 {
+  border-right: 2px solid transparent;
+
+  /* define animation types for text + cursor */
+  animation: animated-text__2 4s steps(38, end) 1s 1 normal both,
+    animated-cursor 900ms steps(2, end) 4.5;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.TypingEffect_Line_3 {
+  border-right: 2px solid transparent;
+
+  /* define animation types for text + cursor */
+  animation: animated-text__3 4s steps(39, end) 1s 1 normal both,
+    animated-cursor 900ms steps(2, end) infinite;
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: black;
+  }
+}
+
+@keyframes animated-text__1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 23ch;
+  }
+}
+
+@keyframes animated-text__2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 38ch;
+  }
+}
+
+@keyframes animated-text__3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 39ch;
+  }
+}
+
+/*===============================================================*/
